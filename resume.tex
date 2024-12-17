@@ -15,6 +15,7 @@
 \usepackage{array} % tabularx requires this
 \usepackage[dvipsnames]{xcolor} % for coloring text
 \definecolor{primaryColor}{RGB}{0, 0, 0} % define primary color
+\definecolor{myBlue}{RGB}{25, 50, 159} % define primary color
 \usepackage{enumitem} % for customizing lists
 \usepackage{fontawesome5} % for using icons
 \usepackage{amsmath} % for math
@@ -34,7 +35,6 @@
 \usepackage{ifthen} % for conditional statements
 \usepackage{needspace} % for avoiding page brake right after the section title
 \usepackage{iftex} % check if engine is pdflatex, xetex or luatex
-
 
 % Ensure that generate pdf is machine readable/ATS parsable:
 \ifPDFTeX
@@ -106,6 +106,17 @@
     \end{adjustwidth}
 } % new environment for one column entries
 
+\newenvironment{twocolentryb}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 10 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
 \newenvironment{twocolentry}[2][]{
     \onecolentry
     \def\secondColumn{#2}
@@ -151,6 +162,15 @@
 
 % new command for external links:
 
+\makeatletter
+\renewcommand{\section}{%
+  \@startsection{section}{1}{0mm}%
+  {-\baselineskip}{0.5\baselineskip}%
+  {\normalfont\Large\bfseries\color{myBlue}}%
+}
+\makeatother
+
+
 
 \begin{document}
     \newcommand{\AND}{\unskip
@@ -190,8 +210,6 @@
     \end{header}
 
     \vspace{5 pt - 0.3 cm}
-
-
     \section{Experience}
 
         \begin{twocolentry}{
@@ -273,19 +291,14 @@
         \end{onecolentry}
 
     \section{Skills}
-        \begin{onecolentry}
-            \textbf{Languages:} C\#, C++, Python, Typescript, Kotlin     \hspace{2cm}    \textbf{Networking:} Unity Netcode, Pun/Fusion, Mirror, Fishnet
-        \end{onecolentry}
+    \begin{twocolentryb}{
+        \textbf{Networking:} Unity Netcode, Pun/Fusion, Mirror, Fishnet
+        \textbf{General:} OOP, Functional, Web APIs, Git, Docker, CI/CD 
+    }
+        \textbf{Languages:} C\#, C++, Python, Typescript, Kotlin
+        \textbf{Technologies:} Unity VR Packages, Kafka, Node, PyTorch, Sagemaker, gRCP, AWS S3
+    \end{twocolentryb}
 
-        \vspace{0.1 cm}
-
-        \begin{onecolentry}
-            \textbf{Technologies:} Unity VR Packages, Kafka, Node, PyTorch, \hspace{0.8cm} \textbf{General:} OOP, Functional, Web APIs, Git, Docker, CI/CD 
-        \end{onecolentry}
-
-         \begin{onecolentry}
-            Sagemaker, gRCP, AWS S3
-         \end{onecolentry}
     \section{Education}
         \begin{twocolentry}{
             Dec 2019 – Dec 2023

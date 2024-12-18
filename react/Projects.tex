@@ -1,0 +1,49 @@
+
+\newenvironment{twocolentry_proj}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 7 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\vspace{5 pt - 0.5 cm}
+\section{Projects}
+\begin{twocolentry_proj}{
+    \mbox{\hrefWithoutArrow{https://github.com/sethclim/Venus}{https://github.com/sethclim/Venus}}%
+}
+\textbf{Venus} React, Zustand, Custom-UI Library  
+\end{twocolentry_proj}
+
+\begin{onecolentry}
+    \begin{highlights}
+        \item Crafted immersive scenes and interactions that accurately replicate the working environments
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.10 cm}
+\begin{twocolentry_proj}{
+    \mbox{\hrefWithoutArrow{https://github.com/Souschef-App}{https://github.com/Souschef-App}}%
+}
+\textbf{SousChef,} ReactNative, Zustand, Custom-UI Library  
+\end{twocolentry_proj}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Crafted immersive scenes and interactions that accurately replicate the working environments
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.10 cm}
+\begin{twocolentry_proj}{
+    \mbox{\hrefWithoutArrow{https://github.com/sethclim/rn-scales-app}{https://github.com/sethclim/rn-scales-app}}%
+}
+\textbf{Scales App,} ReactNative, Zustand, Custom-UI Library  
+\end{twocolentry_proj}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Crafted immersive scenes and interactions that accurately replicate the working environments
+    \end{highlights}
+\end{onecolentry}

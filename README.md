@@ -5,7 +5,11 @@
 docker image
 
 ```
-ghcr.io/xu-cheng/texlive-full:latest
+docker pull ghcr.io/xu-cheng/texlive-full:latest
+```
+
+```
+https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop
 ```
 
 vs-code settings

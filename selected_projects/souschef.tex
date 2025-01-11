@@ -1,11 +1,27 @@
-\vspace{5 pt - 0.5 cm}
+
+\newenvironment{twocolentry_proj}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 7 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\vspace{5 pt - 0.4 cm}
 \section{Selected Project}
-\begin{onecolentry}
-\textbf{SousChef Cooking Platform} - TypeScript, .Net, Python, GRCP, Docker, Instructor 
-\end{onecolentry}
+\begin{twocolentry_proj}{
+    \mbox{\hrefWithoutArrow{https://github.com/Souschef-App}{github.com/Souschef-App}}%
+}
+
+\textbf{SousChef Cooking Platform}
+\end{twocolentry_proj}
 
 \vspace{0.10 cm}
 \begin{onecolentry}
+    \small TypeScript, .Net, Python, GRCP, Docker, Instructor 
     \begin{highlights}
         \item Engineered a microservice backend - .Net API for data/actions and a GO socket server for real-time session data
         \item Implemented an AI python service using Instructor on top of GPT to break down recipes into actionable tasks

@@ -1,0 +1,49 @@
+
+\newenvironment{twocolentry_proj}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 7 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\vspace{5 pt - 0.5 cm}
+\section{Projects}
+\begin{twocolentry_proj}{
+    \mbox{\hrefWithoutArrow{https://github.com/sethclim/SideChain}{https://github.com/sethclim/SideChain}}%
+}
+\fontsize{11 pt}{11 pt}\textbf{SideChain VST} C++, JUCE, Cmake
+\end{twocolentry_proj}
+
+\begin{onecolentry}
+    \begin{highlights}
+        \item Audio plugin to do sidehain effects, applying the visual graph to a specified music division
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.10 cm}
+\begin{twocolentry_proj}{
+    \mbox{\hrefWithoutArrow{https://github.com/sethclim/ForgeUML}{https://github.com/sethclim/ForgeUML}}%
+}
+\fontsize{11 pt}{11 pt}\textbf{ForgeUML} C++, Emscripten, Visage UI, WASM
+\end{twocolentry_proj}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Free web based UML diagraming tool for fast iteration that doesn't look like it was made in the early 90s
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.10 cm}
+\begin{twocolentry_proj}{
+    \mbox{\hrefWithoutArrow{https://github.com/sethclim/quanta-ray-tracing-engine}{https://github.com/sethclim/quanta-ray-tracing-engine}}%
+}
+\fontsize{11 pt}{11 pt}\textbf{Quanta Ray Tracing Engine} C++, Vulkan, CMAKE
+\end{twocolentry_proj}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Raytracing Engine
+    \end{highlights}
+\end{onecolentry}

@@ -1,0 +1,51 @@
+
+\newenvironment{twocolentry_proj}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 7 cm}
+    \begin{paracol}{2}
+        }{
+            \switchcolumn \raggedleft \secondColumn
+        \end{paracol}
+        \endonecolentry
+        } % new environment for two column entries
+        
+\vspace{5 pt - 0.5 cm}
+\section{Projects}
+
+\vspace{0.10 cm}
+\begin{twocolentry_proj}{
+    \mbox{\hrefWithoutArrow{https://github.com/sethclim/rn-scales-app}{https://github.com/sethclim/rn-scales-app}}%
+    }
+    \fontsize{11 pt}{11 pt}\textbf{Scales App} React Native, TypeScript, NativeBlocks UI, Skia, Redux
+\end{twocolentry_proj}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Scales app to help musicians practice technique and avoid selection bias; Self developed UI (Native-Blocks);
+    \end{highlights}
+\end{onecolentry}
+        
+\vspace{0.10 cm}
+\begin{twocolentry_proj}{
+    \mbox{\hrefWithoutArrow{https://github.com/Souschef-App}{https://github.com/Souschef-App}}%
+    }
+    \fontsize{11 pt}{11 pt}\textbf{SousChef} React Native, TypeScript, Zustand, Custom UI Library  
+\end{twocolentry_proj}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Created a mobile app facilitating cooking as a group, automating assigning tasks and planning (RecipeAI).
+    \end{highlights}
+\end{onecolentry}
+
+
+\begin{twocolentry_proj}{
+    \mbox{\hrefWithoutArrow{https://github.com/sethclim/Venus}{https://github.com/sethclim/Venus}}%
+}
+\fontsize{11 pt}{11 pt}\textbf{Venus} React, Functional Hooks, Context, Halfmoon CSS, Bootstrap
+\end{twocolentry_proj}
+
+\begin{onecolentry}
+    \begin{highlights}
+        \item Venus is a bug tracking platform that streamlines the management of bug tickets across multiple projects
+    \end{highlights}
+\end{onecolentry}

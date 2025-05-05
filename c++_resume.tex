@@ -2,8 +2,8 @@
 % Packages:
 \usepackage[
     ignoreheadfoot, % set margins without considering header and footer
-    top=1 cm, % seperation between body and page edge from the top
-    bottom= 1 cm, % seperation between body and page edge from the bottom
+    top=0.8 cm, % seperation between body and page edge from the top
+    bottom= 0.4 cm, % seperation between body and page edge from the bottom
     left=2 cm, % seperation between body and page edge from the left
     right=2 cm, % seperation between body and page edge from the right
     footskip=1.0 cm, % seperation between body and footer
@@ -72,7 +72,7 @@
     -1pt
 }{
     % top space:
-    0.3 cm
+    0.1 cm
 }{
     % bottom space:
     0.2 cm
@@ -81,7 +81,7 @@
 \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
 \newenvironment{highlights}{
     \begin{itemize}[
-        topsep=0.10 cm,
+        topsep=0.0 cm,
         parsep=0.10 cm,
         partopsep=0pt,
         itemsep=0pt,
@@ -149,10 +149,12 @@
 } % new environment for three column entries
 
 \newenvironment{header}{
-    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
-}{
-    \par\kern\topsep
-} % new environment for the header
+    \setlength{\topsep}{0pt}%
+    \par\kern\topsep%
+    \linespread{1.5}%
+}{%
+    \par\kern\topsep%
+}
 
 \newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
   \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
@@ -191,26 +193,27 @@
     \begin{header}
         \fontsize{31 pt}{31 pt}\selectfont Seth Climenhaga
 
-        \vspace{5 pt}
-
+        \vspace{1 pt}
         \normalsize
         \mbox{Waterloo, ON}%
         \kern 5.0 pt%
         \AND%
         \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{tel:+01-705-571-1633}{+1 705-571-1633}}%
+        \kern 5.0 pt%
+        \vspace{-3pt} %
+        \par
+        \kern-6pt %
+        \kern 5.0 pt%
         \mbox{\hrefWithoutArrow{mailto:sethclim@gmail.com}{sethclim@gmail.com}}%
         \kern 5.0 pt%
         \AND%
         \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{tel:+01-705-571-1633}{+1 705-571-1633}}%
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/sethclim}{linkedin.com/in/sethclim}}%
         \kern 5.0 pt%
         \AND%
-        % \kern 5.0 pt%
-        % \mbox{\hrefWithoutArrow{https://yourwebsite.com/}{yourwebsite.com}}%
-        % \kern 5.0 pt%
-        % \AND%
         \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{https://linkedin.com/in/sethclim}{linkedin.com/in/sethclim}}%
+        \mbox{\hrefWithoutArrow{https://sethclimenhaga.dev/}{sethclimenhaga.dev}}%
         \kern 5.0 pt%
         \AND%
         \kern 5.0 pt%
@@ -219,9 +222,9 @@
 
     \vspace{5 pt - 0.3 cm}
 
+    \input{"c++/Skills"}
     \input{"c++/Experience"}
     \input{"c++/Projects"}
-    \input{"c++/Skills"}
     \input{"core/Education"}
    
 \end{document}

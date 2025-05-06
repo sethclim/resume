@@ -1,0 +1,42 @@
+
+\newenvironment{twocolentry_proj}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 9 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\vspace{5 pt - 0.4 cm}
+\section{Selected Project}
+\begin{twocolentry_proj}{
+    \mbox{\hrefWithoutArrow{https://github.com/Souschef-App}{github.com/Souschef-App}}%
+}
+
+\textbf{SousChef Cooking Platform}
+\end{twocolentry_proj}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \small TypeScript, .Net, Python, React Native, gRPC, Docker, Instructor 
+    \begin{highlights}
+        \item Built a microservice backend using  \textbf{.NET} (data API),  \textbf{GO} (real-time session data), and  \textbf{Python} (AI processing), with \textbf{gRPC} and \textbf{Protobufs} for efficient communication and \textbf{Docker} for deployment.
+        \item Created an AI-driven  \textbf{Python} service with GPT-based \textbf{Instructor} to transform recipes into actionable tasks, enhancing cooking process automation.
+    \end{highlights}
+\end{onecolentry}
+
+
+\vspace{0.10 cm}
+\begin{twocolentry_proj}{
+    \mbox{\hrefWithoutArrow{https://github.com/sethclim/quanta-ray-tracing-engine}{github.com/sethclim/quanta-ray-tracing-engine}}%
+}
+\fontsize{11 pt}{11 pt}\textbf{Quanta Ray Tracing Engine} C++, Vulkan, CMAKE
+\end{twocolentry_proj}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Built a raytracing engine in \textbf{Vulkan} and \textbf{C++}; implementing rendering pipelines and low-level GPU management
+    \end{highlights}
+\end{onecolentry}

@@ -1,5 +1,17 @@
+
+\newenvironment{twocolentry_proj}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 9 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
 \vspace{5 pt - 0.3 cm}
-\section{Selected Project}
+\section{Selected Projects}
 \begin{onecolentry}
 \textbf{Chemical Manufacturing Simulator,} Unity, Unity XR Toolkit, Vive, Quest 2, Blender 
 \end{onecolentry}
@@ -7,8 +19,19 @@
 \vspace{0.10 cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item Engineered a robust interaction system on top of XR Interaction Toolkit to create realistic VR interactions 
-        \item Implemented state machines to orchestrate ordered scenarios, ensuring that trainees are exposed to the necessary steps in a structured and educational manner
-        \item Replicated working environments with accurate equipment controls, pouring liquids, touch screens etc
+        \item Engineered a VR interaction system using /\textbf{XR Interaction Toolkit}, enabling realistic object manipulation, touchscreens, and fluid simulation
+        \item Designed state-driven scenarios for trainees with step-by-step procedures in accurate virtual environments
     \end{highlights}
 \end{onecolentry}   
+
+\vspace{0.10 cm}
+\begin{twocolentry_proj}{
+    \mbox{\hrefWithoutArrow{https://github.com/sethclim/quanta-ray-tracing-engine}{github.com/sethclim/quanta-ray-tracing-engine}}%
+}
+\fontsize{11 pt}{11 pt}\textbf{Quanta Ray Tracing Engine} C++, Vulkan, CMAKE
+\end{twocolentry_proj}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Built a raytracing engine in \textbf{Vulkan}/\textbf{C++}; implementing rendering pipelines and low-level GPU management
+    \end{highlights}
+\end{onecolentry}

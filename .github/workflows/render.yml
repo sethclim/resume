@@ -15,6 +15,11 @@ jobs:
                   root_file: |
                       unity_resume.tex
                       react_native_resume.tex
+                      backend_resume.tex
+                      c++_resume.tex
+                      dotnet_resume.tex
+                      react_resume.tex
+                      python_resume.tex
             - name: Upload PDF file
               uses: actions/upload-artifact@v4
               with:
@@ -22,3 +27,8 @@ jobs:
                   path: |
                       unity_resume.pdf
                       react_native_resume.pdf
+                      backend_resume.pdf
+                      c++_resume.pdf
+                      dotnet_resume.pdf
+                      react_resume.pdf
+                      python_resume.pdf

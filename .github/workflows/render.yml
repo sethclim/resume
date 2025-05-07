@@ -20,6 +20,7 @@ jobs:
                       dotnet_resume.tex
                       react_resume.tex
                       python_resume.tex
+                      fullstack_resume.tex
             - name: Upload PDF file
               uses: actions/upload-artifact@v4
               with:
@@ -32,3 +33,4 @@ jobs:
                       dotnet_resume.pdf
                       react_resume.pdf
                       python_resume.pdf
+                      fullstack_resume.pdf

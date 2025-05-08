@@ -1,3 +1,4 @@
+
 \documentclass[10pt, letterpaper]{article}
 % Packages:
 \usepackage[
@@ -48,6 +49,8 @@
 \usepackage{charter}
 
 \usepackage{multicol}
+
+
 % \setlength{\columnsep}{1cm}
 % \renewcommand{\labelitemi}{\hskip-1em}
 
@@ -150,7 +153,7 @@
 
 \newenvironment{header}{
     \setlength{\topsep}{0pt}%
-    \par\kern\topsep%
+    \par\kern\topsep\centering%
     \linespread{1.5}%
 }{%
     \par\kern\topsep%
@@ -183,46 +186,12 @@
 
 
 \begin{document}
-    \newcommand{\AND}{\unskip
-        \cleaders\copy\ANDbox\hskip\wd\ANDbox
-        \ignorespaces
-    }
-    \newsavebox\ANDbox
-    \sbox\ANDbox{$|$}
-
-    \begin{header}
-        \fontsize{31 pt}{31 pt}\selectfont Seth Climenhaga
-
-        \vspace{1 pt}
-        \normalsize
-        \mbox{Waterloo, ON}%
-        \kern 5.0 pt%
-        \AND%
-        \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{tel:+01-705-571-1633}{+1 705-571-1633}}%
-        \kern 5.0 pt%
-        \vspace{-3pt} %
-        \par
-        \kern-6pt %
-        \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{mailto:sethclim@gmail.com}{sethclim@gmail.com}}%
-        \kern 5.0 pt%
-        \AND%
-        \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{https://linkedin.com/in/sethclim}{linkedin.com/in/sethclim}}%
-        \kern 5.0 pt%
-        \AND%
-        \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{https://sethclimenhaga.dev/}{sethclimenhaga.dev}}%
-        \kern 5.0 pt%
-        \AND%
-        \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{https://github.com/sethclim}{github.com/sethclim}}%
-    \end{header}
+    \input{header}
 
     \vspace{5 pt - 0.3 cm}
-
     \input{"python/Skills"}
+
+    \vspace{5 pt - 0.8 cm}
     \input{"python/Experience"}
     \input{"python/projects"}
     \input{"python/Education"}

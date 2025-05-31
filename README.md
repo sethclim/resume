@@ -17,4 +17,5 @@ vs-code settings
 ```
     "latex-workshop.docker.enabled": true,
     "latex-workshop.docker.image.latex": "ghcr.io/xu-cheng/texlive-full"
+    "latex-workshop.latex.outDir": "%DIR%/out/%DOCFILE%" (optional)
 ```

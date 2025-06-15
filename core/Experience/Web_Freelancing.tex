@@ -7,10 +7,27 @@
 
 \vspace{0.10 cm}
 \begin{onecolentry}
-   \begin{highlights}
-       \item Redesigned and updated a React-based e-commerce frontend, modernizing the UI/UX, including implementing new features to improve customer engagement and usability
-       \item Developed a paginated product page with a custom waveform playback visual connected to audio playbacks
-       \item Extended the capabilities of a boilerplate React PWA e-commerce platform
-       \item Integrated a payment system on both the front and back end with a payment processor (checkout page, payment endpoint, webhooks, etc.)
-   \end{highlights}
+
+    \ifcase\webFreelancingVariant
+      \begin{highlights}
+        \item Modernized a \textbf{React} e-commerce site with a new UI/UX, custom audio playback, and new store features
+        \item Implemented full payment integrations, including checkout UI, backend endpoints, and webhook handling
+      \end{highlights}
+    \or
+      \begin{highlights}
+          \item Redesigned and updated a \textbf{React} e-commerce frontend, modernizing the UI/UX, including implementing new features to improve customer engagement and usability
+          \item Developed a custom waveform playback component with audio streamed from server
+          \item Extended the capabilities of a boilerplate \textbf{React PWA} e-commerce platform
+          \item Integrated a payment system on both the front and back end with a payment processor (checkout page, payment endpoint, webhooks, etc.)
+      \end{highlights}
+    \else
+      \begin{highlights}
+        \item Redesigned and updated a \textbf{React}-based e-commerce frontend, modernizing the UI/UX, including implementing new features to improve customer engagement and usability
+        \item Developed a paginated product page with a custom waveform playback visual connected to audio playbacks
+        \item Extended the capabilities of a boilerplate \textbf{React PWA} e-commerce platform
+        \item Integrated a payment system on both the front and back end with a payment processor (checkout page, payment endpoint, webhooks, etc.)
+      \end{highlights}
+    \fi
+
 \end{onecolentry}
+

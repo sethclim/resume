@@ -1,17 +1,23 @@
 \documentclass[10pt, letterpaper]{article}
 
 \usepackage{config}
+% \usepackage{etoolbox}
+% \newtoggle{showSpeakSynkSQL}
+% \newtoggle{focusPythonArbelos}
+% \newtoggle{useShortWebExperience}
 
-% Packages:
+
+\newcommand{\webFreelancingVariant}{\variantBackend}
+\newcommand{\speakSynkVariant}{\variantSpeakSynkSQL}
 
 \begin{document}
     \input{"header"}
 
     \vspace{5 pt - 0.3 cm}
 
-    \input{"c++/Skills"}
-    \input{"c++/Experience"}
-    \input{"c++/Projects"}
-    \input{"core/Education"}
+    \input{c++/Skills}
+    \input{c++/Experience}
+    \input{c++/Projects}
+    \input{core/Education}
    
 \end{document}

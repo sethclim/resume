@@ -6,9 +6,19 @@
 \vspace{0.10 cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item Designed and deployed an AI-powered distributed video translation and dubbing pipeline
-        \item Built scalable AWS backend supporting concurrent users with Kafka, Step Functions, SageMaker, and Docker
-        \item Developed new algorithms in python leveraging AI (Wav2Lip, Tencent GFPGAN, Meta Segment Anything), computer vision (OpenCV, Adrian Bulat’s FaceAlignment, Google MediaPipe), and audio libraries (Pydub, Rubberband) to enhance the realism and accuracy of the generation pipeline 
-        \item Re-architected the system, achieving a 10x reduction in compute time
+        \item Designed and deployed an AI-powered, distributed video translation and dubbing pipeline using \textbf{Kafka}, \newline \textbf{AWS Step Functions}, \textbf{SageMaker}, and \textbf{Docker}, supporting scalable, concurrent usage
+        \item Engineered services for lip-dubbing, face restoration, text-to-speech, and voice cloning by integrating state-of-the-art AI models such as \textbf{LatentSync}, \textbf{Tencent GFPGAN}, \textbf{OpenVoice}, \textbf{CozyVoice}
+        \item Enhanced generation quality and realism by building systems on top of AI using libraries like \textbf{OpenCV}, \textbf{MediaPipe}, and \textbf{FaceAlignment}, \textbf{Meta Segment Anything 2}.
+        
+        \ifcase\speakSynkVariant
+        \relax
+        \item Restructured execution flow to isolate and reuse shared steps reducing overall compute time by 10x
+        \or
+        \item Developed robust, asynchronous job coordination between modular services using \textbf{MySQL} and \textbf{SQLAlchemy} 
+        \or
+        \item Wrote Node endpoints with \textbf{Jest} tests to ensure robustness and built \textbf{kafka} consumers in \textbf{NestJS} with \textbf{Typescript}
+        \or
+        \item Setup the live web cam view in React for the MVP; Resolved bugs with timing data and webcam on production React site
+        \fi
     \end{highlights}
 \end{onecolentry}

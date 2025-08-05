@@ -3,15 +3,28 @@
 
 \usepackage{config}
 
+\usepackage{etoolbox}
+% \newtoggle{showSpeakSynkSQL}
+% \newtoggle{focusPythonArbelos}
+% \newtoggle{useShortWebExperience}
+
+
+\newcommand{\webFreelancingVariant}{\variantShort}
+\newcommand{\speakSynkVariant}{\variantSpeakSynkSQL}
+\toggletrue{focusPythonArbelos} 
+% \toggletrue{useShortWebExperience} 
+
 \begin{document}
     \input{header}
+
 
     \vspace{5 pt - 0.3 cm}
     \input{"python/Skills"}
 
     \vspace{5 pt - 0.8 cm}
-    \input{"python/Experience"}
+    \input{"core/Experience"}
     \input{"python/projects"}
     \input{"python/Education"}
    
 \end{document}
+
